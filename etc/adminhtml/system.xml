@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="perspective" translate="label" sortOrder="1100000">
+            <label><![CDATA[<a href="https://perspective.net.ua/" target="_BLANK" title="Perspective Studio - Your Best Magento Team">Perspective Studio</a>]]></label>
+        </tab>
+        <section id="sales_customization" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+
+            <label>Sales Customization</label>
+            <tab>perspective</tab>
+            <resource>Perspective_SalesCustomization::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="disable_status" translate="label" sortOrder="7" type="multiselect" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Disable Status</label>
+                    <source_model>Perspective\SalesCustomization\Model\Config\Source\DisableStatusOptions</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
